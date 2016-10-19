@@ -1,0 +1,34 @@
+(This documentation assumes usage on the CS50 appliance)
+
+Kyle Kwong
+CS50
+
+    Hello, and welcome to the documentation for my CS50 final project, Harvard Room Maps! Since this project was made
+using some parts, especially the functions, from problem set 7, setting it up for use is also similar to problem set 7. First,
+you'll want to download the zip file to the CS50 appliance. Next, unzip the file by running the command "unzip final.zip" in the
+terminal. You should now have a folder called "final" which contains all of the files needed for the website to work. Next, to make
+things easier, you'll want to move the folder into your ~/vhosts directory. Next you'll have to change the access permissions in
+order to view files in your browser, and it will make it much easier if the file is in the ~/vhosts directory.
+    To change the access permissions, using a terminal window, you will want to run the commands "chmod a+x ~", "chmod a+x ~/vhosts",
+"chmod a+x ~/vhosts/final", "chmod a+x ~/vhosts/final/public" in order to make all of the files within those directories executable
+by everyone (especially you!). Next, you'll want to change directories so that you are in the public directory within final. To do
+so, you can run the command "cd ~/vhosts/final/public". The directory "public" also has four subdirectories, css, img, js, and font,
+which we will also want to make executable, since they contain important files (especially img!). To do this, use the command 
+"chmod a+x css img js font" while you are in the public directory. Next, we also want to make the files within each of those 
+subdirectories readable (again, especially img, since it contains all the pictures of the dorm maps). We can achieve this by running
+the command "chmod a+r css/* img/* js/* font/*". Next, so that we can access final and all of its goodness in our browser, we will
+have to associate the CS50 appliance's IP address with final, which we can do by executing "sudo gedit /etc/hosts" in a terminal window
+and then adding "127.0.0.1 final" to the end of the document that pops up (without changing anything else!). Make sure you save, and 
+then exit that window. 
+    Almost there! Finally, before we can start using the website, we need to update the mySQL database. Included in the final folder is
+a file called "rooms.sql". If you open it in gedit, you can see that it contains all of the freshman dorm rooms as well as their
+corresponding entryways and floor numbers. If you examine it more closely, though, you may realize that the entire document is actually
+written in SQL (standard query language, hence the .sql extension), which contains the instructions needed to make a table containing
+all of the dorm information in your mySQL database. To do this, you can copy the full length of the rooms.sql document, and then head to
+http://final/phpmyadmin/sql.php where you can then click the SQL tab at the top, and then paste the code into the box and press "Go"
+at the bottom right hand corner of the page to execute it. If nothing went wrong, you should now be ready to go!
+    To access the home page of the website, simply go into your web browser (Google Chrome) and type in http://final where you should then
+see a giant "Harvard Room Maps" at the top of the page. The website itself is extremely easy to use. You can browse through maps by
+clicking on any of the dorm names at the home page and then clicking on any room number on the next page, which will then bring you to
+a map of the floor on which that room is. You can also search for a room at the home page by typing in the name of the dorm and the number
+(make sure you include the preceding letter if the room number includes a letter, i.e. Wigglesworth A11 (without the hyphen)). 

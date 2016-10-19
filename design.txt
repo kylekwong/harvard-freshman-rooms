@@ -1,0 +1,18 @@
+Kyle Kwong
+CS50
+
+    My CS50 final project, Harvard Room Maps, is essentially a collection of maps (made on my own). My project is based on problem
+set 7, as it is written primarily in PHP and uses a SQL database. I also used some of the files from problem set 7, especially
+the functions.php file, since they provided to be extremely helpful in making my website.
+    I decided to use a SQL database to store all of the individual rooms and corresponding entryways/floors because the SQL database,
+when used wisely, makes locating and modifying data extremely quickly and easily. Even though my table was significantly larger than
+the table we used in problem set 7, retrieving information from the SQL database still seems incredibly fast. As you can see from the
+home page, each freshman dorm has its own .php file; however, they are all rendered using the same template, and the code in the .php
+files themselves are very similar (the only real difference between each .php file for the dorms is the title variable that is passed
+into the template).
+    The template displays a table with all of the rooms in a certain dorm (depending on which .php file is loaded) with their
+corresponding entryways and floors. The information comes directly from the SQL table, and there is no noticeable lag time when
+loading the pages, though this may be much more pronounced if we were to use a computer to measure how much time the page takes to load.
+Each room is linked to a map of the floor on which it belongs. I set up each image of the floors so that they could be accessed through
+some variation of "http://final/img/(dormname)/(dormname)_(entryway)_floor_(floornumber)". I did this so that it would be much easier
+to write more generic code that could link to any of the maps instead of hard-coding links for every single map.

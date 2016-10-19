@@ -1,0 +1,57 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * 
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* centers navigation bar; found at  http://stackoverflow.com/questions/7165423/twitter-bootstrap-center-pills*/
+.centered-pills 
+{ 
+    text-align:center; 
+}
+.centered-pills ul.nav-pills 
+{ 
+    display:inline-block;
+}
+.centered-pills li 
+{ 
+    display:inline; 
+}
+.centered-pills a 
+{ 
+    float:left;
+}
+
+#top
+{
+    padding: 20px;
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
